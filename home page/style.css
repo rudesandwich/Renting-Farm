@@ -1,0 +1,149 @@
+:root {
+    --green: green;
+    --whiteText: white;
+    --topNavBackgroundColor: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+/* top-navigation */
+
+.top-navigation {
+    height: 50px;
+    color: var(--whiteText);
+    background-color: var(--topNavBackgroundColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.top-navigation .update {
+    display: flex;
+}
+
+.top-navigation .date-socials {
+    display: flex;
+    align-items: center;
+}
+
+.date-socials .date {
+    display: flex;
+}
+
+.date-socials .line {
+    height: 25px;
+    border-left: solid 1px white;
+    margin: 0 1em;
+}
+
+.date-socials .socials {
+    display: flex;
+}
+
+.socials a {
+    color: var(--whiteText);
+}
+
+.socials a:hover {
+    color: var(--green);
+    transition: 0.5s;
+}
+
+.top-navigation i {
+    margin-right: 10px;
+}
+
+.top-navigation .fa-solid {
+    color: var(--green);
+}
+
+/* navigation */
+.navigation  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.navigation .line {
+    height: 35px;
+    border-left: solid 1px var(--topNavBackgroundColor);
+    margin: 0 1em;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+header p {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--topNavBackgroundColor);
+}
+
+.left-nav .support {
+    display: flex;
+    align-items: center;
+}
+
+.support i {
+    font-size: 20px;
+    color: var(--green);
+    padding-right: 0.5em;
+}
+
+.support p {
+    font-size: 20px;
+    padding: 0.2em 0;
+    text-align: center;
+}
+
+.support span {
+    display: block;
+}
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li a {
+    color: var(--topNavBackgroundColor);
+    text-decoration: none;
+    padding: 0 1em;
+    font-size: ;
+}
+
+nav li a:hover {
+    color: var(--green);
+    transition: 0.5s;
+}
+
+/* hero */
+.hero {
+    height: 85%;
+    width: 100%;
+    background-color: green;
+    background-image: url("images/hero\ page.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
