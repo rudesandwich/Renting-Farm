@@ -1,149 +1,716 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 :root {
-    --green: green;
-    --whiteText: white;
-    --topNavBackgroundColor: black;
+  --green: green;
+  --white: white;
+  --gold: gold;
+  --grey: grey;
+  --orangered: orangered;
+  --black: black;
+  --darkGreen: darkgreen;
+
+  --fontFamily: "Roboto", sans-serif;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 body {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--fontFamily);
+  max-width: 1200px;
+  margin: auto;
 }
+
 /* top-navigation */
 
 .top-navigation {
-    height: 50px;
-    color: var(--whiteText);
-    background-color: var(--topNavBackgroundColor);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2em;
+  height: 40px;
+  color: var(--white);
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
 }
 
 .top-navigation .update {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 
 .top-navigation .date-socials {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .date-socials .date {
-    display: flex;
+  display: flex;
 }
 
 .date-socials .line {
-    height: 25px;
-    border-left: solid 1px white;
-    margin: 0 1em;
+  height: 25px;
+  border-left: solid 1px var(--white);
+  margin: 0 1em;
 }
 
 .date-socials .socials {
-    display: flex;
+  display: flex;
 }
 
 .socials a {
-    color: var(--whiteText);
+  color: var(--white);
 }
 
 .socials a:hover {
-    color: var(--green);
-    transition: 0.5s;
+  color: var(--green);
+  transition: 0.5s;
 }
-
+.top-navigation p {
+  font-size: 13px;
+}
 .top-navigation i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .top-navigation .fa-solid {
-    color: var(--green);
+  color: var(--green);
 }
 
 /* navigation */
-.navigation  {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2em;
+
+.navigation {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2em 2em;
 }
 
 .navigation .line {
-    height: 35px;
-    border-left: solid 1px var(--topNavBackgroundColor);
-    margin: 0 1em;
+  height: 30px;
+  border-left: solid 1px var(--black);
+  margin: 0 1em;
 }
 
 .left-nav {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-header p {
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-header a {
-    text-decoration: none;
-    color: var(--topNavBackgroundColor);
+.left-nav h2 a {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
 }
 
 .left-nav .support {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.support i {
-    font-size: 20px;
-    color: var(--green);
-    padding-right: 0.5em;
+.left-nav .support i {
+  font-size: 20px;
+  color: var(--green);
+  padding-right: 0.5em;
 }
 
-.support p {
-    font-size: 20px;
-    padding: 0.2em 0;
-    text-align: center;
+.left-nav .support h4 {
+  padding: 0.2em 0;
+  text-align: center;
 }
 
-.support span {
-    display: block;
+.left-nav .support span {
+  display: block;
 }
 
-
+nav .fa {
+    display: none;
+}
 
 nav ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin: 0 1em;
 }
 
 nav li a {
-    color: var(--topNavBackgroundColor);
-    text-decoration: none;
-    padding: 0 1em;
-    font-size: ;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 13px;
 }
 
 nav li a:hover {
-    color: var(--green);
-    transition: 0.5s;
+  color: var(--green);
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+nav ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  display: block;
+  background-color: var(--green);
+  transition: 0.5s;
+  margin: auto;
+}
+
+nav li a:hover::after {
+  width: 100%;
 }
 
 /* hero */
+
 .hero {
-    height: 85%;
-    width: 100%;
-    background-color: green;
-    background-image: url("images/hero\ page.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+  height: 89vh;
+  background-image: url("images/hero\ page.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
+.hero h1,
+.hero p {
+  color: var(--white);
+  text-align: center;
+}
+.hero h1 {
+  font-size: 35px;
+}
+.hero h1 span {
+  display: block;
+}
+
+form {
+  margin: 2em 0;
+}
+
+.hero form input {
+  width: 300px;
+  padding: 1em;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+.hero form button {
+  padding: 1em 2em;
+  border-radius: 10px;
+  border: none;
+  margin: -0.2em auto 1em;
+}
+
+/* section 2 */
+.component {
+  text-align: center;
+  margin: 0 auto 2em;
+}
+
+.component p {
+  font-size: 14px;
+  margin: 2em 0 0;
+}
+
+.component h2 {
+  font-size: 30px;
+}
+
+.component .article-section {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+}
+
+article {
+  flex-basis: 300px;
+  background-color: var(--grey);
+  padding: 0.5em 0.5em 0;
+  overflow: hidden;
+}
+
+article img {
+  width: 100%;
+}
+
+article h3 {
+  padding: 0.5em;
+}
+
+/* section offers */
+
+.offers {
+  width: 100%;
+  background-image: url("images/offers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+  padding: 1px;
+  margin: auto;
+}
+
+.offers .offer-container {
+  max-width: 1000px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  margin: auto;
+}
+
+.offers .offer-image {
+  width: 50%;
+}
+
+.offer-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.offers .text-component {
+  width: 50%;
+  max-width: 400px;
+  /* margin: 0 2em; */
+  text-align: center;
+  padding: 0 1em;
+}
+
+.text-component p {
+  font-size: 15px;
+}
+.text-component p:first-child {
+  margin: 1em;
+}
+.text-component span {
+  display: block;
+}
+
+hr {
+  width: 55%;
+  margin: 0.3em auto;
+  border-color: var(--gold);
+}
+
+.hr1 {
+  width: 45%;
+}
+
+.hr2 {
+  width: 20%;
+}
+
+.text-component > .text-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em 0;
+}
+
+.text-item .line {
+  width: 2px;
+  height: 30px;
+  background-color: var(--white);
+}
+
+.text-item p {
+  width: 50%;
+  padding: 0;
+}
+
+/* section farm */
+.farm-section {
+  width: 100%;
+  height: auto;
+}
+.farm {
+  width: 100%;
+  height: 400px;
+  background-image: url("images/About\ us\ container.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.farm .farm-component {
+  width: 1000px;
+  height: 80%;
+  background-color: var(--white);
+  margin: 0 1em;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.farm-component .farm-image {
+  width: 40%;
+  height: 100%;
+}
+
+.farm-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.farm-component .farm-text {
+  width: 60%;
+  text-align: center;
+}
+
+.farm-text p {
+  margin: 1em;
+}
+
+.farm-text button,
+.contact-us button {
+  padding: 1em 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--whiteText);
+  background-color: var(--orangered);
+  border: none;
+  border-radius: 2px;
+}
+
+.farm-text button:hover {
+  background-color: var(--darkGreen);
+  color: var(--white);
+
+}
+
+.contact-us button:hover {
+  background-color: var(--white);
+  color: var(--darkGreen);
+
+}
+
+/* contact us */
+
+.contact-us {
+  width: 100%;
+  background-color: darkgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  padding: 2%;
+  margin: 2em 0;
+  overflow: hidden;
+}
+
+.contact-us h3 {
+  text-align: center;
+}
+
+.contact-us span {
+  display: block;
+}
+
+.contact-us .line {
+  width: 2px;
+  height: 50px;
+  background-color: var(--white);
+}
+
+.contact-us .support {
+  display: flex;
+  align-items: center;
+}
+
+.contact-us i {
+  font-size: 25px;
+  color: var(--white);
+  margin-right: 10px;
+}
+
+/* footer */
+
+footer {
+  background-color: rgb(63, 57, 57);
+  color: var(--white);
+  padding: 1px 1em;
+  text-align: center;
+  overflow: hidden;
+}
+
+footer .subcription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+}
+
+.subcription .line {
+  width: 2px;
+  height: 40px;
+  background-color: rgba(236, 223, 223, 0.5);
+}
+
+.subcription input {
+  width: 210px;
+  padding: 1em;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-size: 12px;
+  text-align: center;
+}
+form button {
+  padding: 0.8em 1.2em;
+  color: var(--white);
+  background: var(--green);
+  border: none;
+  margin-left: 0.5em;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: var(--white);
+  color: var(--darkGreen);
+}
+
+footer span {
+  display: block;
+}
+
+footer > hr {
+  width: 80%;
+  border-color: var(--white);
+  margin: 1em auto;
+}
+
+footer > .information {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+footer p,
+footer a {
+  font-size: 13px;
+}
+
+.information ul {
+  list-style: none;
+  display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.information ul li::marker {
+  content: ". ";
+  color: var(--white);
+  font-size: 1em;
+}
+
+.information a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.information ul li a:hover {
+  font-weight: bold;
+}
+
+.information ul li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--gold);
+  display: block;
+  transition: 0.5s;
+  margin: auto;
+}
+
+.information li a:hover::after {
+  width: 100%;
+}
+
+footer > p:last-of-type {
+  margin: 2em 1em;
+}
+
+footer > p:last-of-type span {
+  display: inline;
+}
+
+footer .year {
+  color: var(--gold);
+}
+
+footer .etinga {
+  color: var(--green);
+}
+
+@media only screen and (max-width: 770px) {
+  /* top-navigation */
+
+  .top-navigation {
+    display: none;
+  }
+
+
+  nav ul, .navigation .support, .navigation .line {
+    display: none;
+  }
+
+  .navigation nav > .fa {
+    display: inline;
+}
+
+
+  /* contact us */
+ 
+  .contact-us > span {
+    display: inline;
+  }
+
+  .contact-us i {
+    font-size: 25px;
+    color: var(--white);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+ 
+
+  /* hero */
+  .hero {
+    height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 25px;
+  }
+  .hero h1 span {
+    display: inline;
+  }
+
+  form {
+    margin: 2em auto;
+    text-align: center;
+  }
+
+  .hero form input {
+    width: 90%;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+
+  /* section 2 */
+
+  /* section offers */
+
+  .offers .offer-container {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .offers .offer-image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .offers .text-component {
+    width: 100%;
+  }
+
+  /* section farm */
+
+  .farm {
+    height: auto;
+    padding: 1em 0;
+  }
+
+  .farm .farm-component {
+    width: auto;
+    height: 90%;
+    flex-direction: column;
+  }
+
+  .farm-component .farm-image {
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+  }
+
+  .farm-component .farm-text {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+  }
+
+  .farm-text button {
+    margin: 1em 0;
+  }
+  /* contact us */
+
+  .contact-us {
+    flex-direction: column;
+    gap: 0.9em;
+  }
+
+ 
+
+  .contact-us .line {
+    display: none;
+  }
+  .contact-us span {
+    display: inline;
+  }
+
+  
+
+  /* footer */
+
+  footer .subcription {
+    flex-direction: column;
+    gap: 0;
+    padding: 1em 0;
+  }
+
+  .subcription .line {
+    display: none;
+  }
+
+  form {
+    margin: 1em 1em 0;
+  }
+
+  form button {
+    display: block;
+    margin: 0.5em auto;
+  }
+
+  footer > .information {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+
+  footer .horizontal-line {
+    max-width: 400px;
+    margin: auto;
+  }
 }
